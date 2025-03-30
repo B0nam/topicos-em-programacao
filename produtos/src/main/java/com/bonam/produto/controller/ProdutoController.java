@@ -1,7 +1,7 @@
 package com.bonam.produto.controller;
 
-import com.bonam.produto.model.Produto;
-import com.bonam.produto.service.ProdutoService;
+import com.bonam.produto.domain.model.Produto;
+import com.bonam.produto.domain.service.ProdutoService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -50,6 +50,7 @@ public class ProdutoController {
         produtoAtualizado.setNome(produto.getNome());
         produtoAtualizado.setPreco(produto.getPreco());
         produtoAtualizado.setQuantidadeEmEstoque(produto.getQuantidadeEmEstoque());
+        produtoAtualizado.setStatusEmprestimo(produto.getStatusEmprestimo());
 
         return new ResponseEntity<>(produtoService.save(produtoAtualizado), HttpStatus.OK);
     }

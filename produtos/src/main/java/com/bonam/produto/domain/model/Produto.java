@@ -1,10 +1,8 @@
-package com.bonam.produto.model;
+package com.bonam.produto.domain.model;
 
+import com.bonam.produto.domain.types.StatusEmprestimo;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
@@ -23,4 +21,7 @@ public class Produto {
     private Double preco;
     @NonNull
     private Integer quantidadeEmEstoque;
+    @NonNull
+    @Enumerated(EnumType.STRING)
+    private StatusEmprestimo statusEmprestimo;
 }

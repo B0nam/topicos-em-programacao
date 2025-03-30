@@ -1,7 +1,7 @@
-package com.bonam.produto.service;
+package com.bonam.produto.domain.service;
 
-import com.bonam.produto.model.Produto;
-import com.bonam.produto.repository.ProdutoRepository;
+import com.bonam.produto.domain.model.Produto;
+import com.bonam.produto.domain.repository.ProdutoRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

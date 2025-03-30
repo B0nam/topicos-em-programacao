@@ -1,6 +1,6 @@
-package com.bonam.produto.repository;
+package com.bonam.produto.domain.repository;
 
-import com.bonam.produto.model.Produto;
+import com.bonam.produto.domain.model.Produto;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
